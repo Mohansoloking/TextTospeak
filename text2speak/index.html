@@ -1,0 +1,19 @@
+<html lang="en"> <!--language english en-->
+<head>
+
+</head>
+<body>
+    <h1>text to speech</h1>
+    <textarea id="textToSpeak"rows="10"cols="50"> </textarea>  <!--rows and columns for msg-->
+    <button onclick="textToSpeech()">SPEAK</button>  <!--function calling-->
+    <script>
+        const textToSpeak = document.getElementById('textToSpeak');
+
+
+        function textToSpeech(){
+            let speechobj = new  SpeechSynthesisUtterance(textToSpeak.value);
+            window.speechSynthesis.speak  (speechobj);  
+        }
+    </script>
+</body>
+</html>
